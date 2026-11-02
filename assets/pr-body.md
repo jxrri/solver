@@ -1,3 +1,7 @@
+## Summary
+
+<the "In plain words" part of the executive summary, scenarios included>
+
 ## Problem
 
 <expected vs actual behavior; who and what is affected; ticket link>

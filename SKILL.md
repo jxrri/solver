@@ -4,7 +4,7 @@ description: "Trigger: solve this bug, fix this issue, error, failing behavior, 
 license: Apache-2.0
 metadata:
   author: "David Reyes"
-  version: "1.0"
+  version: "1.1"
 ---
 
 ## Activation Contract
@@ -18,6 +18,7 @@ Load when the user asks to solve a defect, error, failing behavior, or issue tic
 - Stop and ask when the spec is missing or contradicts itself or the code; when a digest `Needs decision` item touches this issue; or when a candidate changes stored data or migrations, infrastructure, auth or permissions, or a public contract.
 - Spec fit and security are gates, not scores. Scores only rank candidates that passed every gate.
 - Every score and test claim cites observed evidence (command and result). A dimension that cannot be measured here is `n/a` with the reason; never invent a number or a result.
+- Summary scenarios describe only behavior verified in step 9; mark any other as `not verified end-to-end`.
 - Security probes, including offensive-security skills, target only local or owned test environments, never production or third parties.
 - Report baseline failures; do not fix them unless the user asks.
 - The fix loop runs at most 3 rounds; then stop and report what still fails.
@@ -43,14 +44,16 @@ Load when the user asks to solve a defect, error, failing behavior, or issue tic
 7. **Score**: apply `references/scoring.md`; pick the top candidate.
 8. **Apply**: implement the winner on a new branch named per the digest; the failing test now passes; update the docs and help text the change affects.
 9. **Verify**: run the full battery on the whole system and compare with the baseline. Fix only failures this change caused, then re-run.
-10. **Deliver**: commit per the digest's convention, push the branch, open a PR to the target branch with `assets/pr-body.md`, link the ticket when the digest names a tracker, and remove the prototype worktrees.
+10. **Summarize**: write the executive summary with `assets/executive-summary.md`: a technical part, and a plain-words part with scenarios built from the project's real roles, screens, and flows. On an early stop, use its early-stop variant.
+11. **Deliver**: commit per the digest's convention, push the branch, open a PR to the target branch with `assets/pr-body.md` (its summary is the plain-words part), link the ticket when the digest names a tracker, and remove the prototype worktrees.
 
 ## Output Contract
 
-Return: root cause, candidates table (gates, scores, evidence), chosen fix and why, verification against the baseline, `n/a` dimensions, PR URL, and open decisions.
+Return the executive summary first, using its early-stop variant when the work stopped before delivery. Then: candidates table (gates, scores, evidence), verification against the baseline, PR URL, and open decisions.
 
 ## References
 
 - `references/test-battery.md` — evidence and fallbacks per test type.
 - `references/scoring.md` — gates, score anchors, averaging, tie-breakers.
 - `assets/pr-body.md` — PR description template.
+- `assets/executive-summary.md` — technical and plain-words summary, scenarios, early-stop variant.

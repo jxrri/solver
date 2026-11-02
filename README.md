@@ -12,7 +12,7 @@ An agent skill that takes a bug or issue from diagnosis to an opened pull reques
    ```
 
    For a single project, clone it into `<project>/.claude/skills/solver` instead.
-3. Ask your agent to solve an issue, e.g. "solve this bug: the cart total ignores discounts". It returns the root cause, a table of candidates, and a PR URL.
+3. Ask your agent to solve an issue, e.g. "solve this bug: the cart total ignores discounts". It returns an executive summary (technical, and in plain words with scenarios from your project), a table of candidates, and a PR URL.
 
 ## What it does
 
@@ -26,6 +26,7 @@ An agent skill that takes a bug or issue from diagnosis to an opened pull reques
 | Simulate | Up to 2 finalists prototyped and tested |
 | Score | Spec fit and security as gates; stability, scalability, security, and spec fit scored 0–10 with evidence |
 | Apply and verify | Winner implemented, full test battery compared with the baseline, at most 3 fix rounds |
+| Summarize | Technical summary, plus a plain-words one with scenarios that use the project's own roles, screens, and flows |
 | Deliver | Branch pushed and PR opened to the project's target branch |
 
 ## Safety rules
@@ -43,6 +44,7 @@ An agent skill that takes a bug or issue from diagnosis to an opened pull reques
 | `references/test-battery.md` | Evidence and fallbacks per test type |
 | `references/scoring.md` | Gates, score anchors, tie-breakers |
 | `assets/pr-body.md` | Pull request template |
+| `assets/executive-summary.md` | Executive summary template, technical and in plain words |
 
 ## License
 
