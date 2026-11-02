@@ -11,9 +11,9 @@ Run heavy suites one at a time: on constrained machines, parallel suites produce
 | Stress and load | Tool, load profile, p95 latency, error rate | Bounded local run against the touched path with an installed tool (k6, autocannon, locust); label it not predictive of production |
 | Scalability | Behavior at 1x, 10x, and 100x input or data size; query plans for database changes (`EXPLAIN ANALYZE`) | Complexity analysis of the changed path, labeled `analysis only` |
 | End-to-end | Scenario names, pass/fail, traces on failure | Drive the running app through the affected flow, with browser automation when available |
-| Visual | Screenshots of the affected screens compared with the spec or mockups | Screenshot comparison described screen by screen |
+| Visual | Screenshots of the affected screens compared with the mapped design frames (link each frame) or the spec's mockups | Screenshot comparison described screen by screen |
 | Security | Dependency audit, SAST when configured, authorization checks on touched endpoints, targeted probes from installed security skills | Dependency audit plus review of input handling, authorization, and secrets in the diff |
-| Spec fit | Each spec requirement (logic and visual) mapped to pass/fail with evidence | None: without a spec, stop and ask |
+| Spec fit | Each requirement mapped to pass/fail with evidence: logic from the spec and the ticket's acceptance criteria, visual from the design file or the spec | None: without a spec, stop and ask |
 
 Rules:
 - Use isolated state (test database, scratch copy) for anything that mutates data.

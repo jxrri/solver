@@ -4,7 +4,7 @@
 
 A candidate that fails any gate is discarded, whatever its scores.
 
-1. **Spec fit**: every spec requirement for the affected behavior, logic and visual, passes.
+1. **Spec fit**: every requirement for the affected behavior passes: logic from the spec and the ticket's acceptance criteria, visual from the design file or the spec.
 2. **Security**: no new finding of medium severity or higher; no new secret, authorization bypass, or injection path.
 3. **Reproduction**: the reproduction test passes.
 4. **No regression**: nothing that passed in the baseline fails.

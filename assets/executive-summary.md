@@ -11,6 +11,7 @@ Write it in the user's conversation language. Use the project's own names for ro
 - **Not measured**: <dimension: reason>, or "none"
 - **Risk and rollback**: <what could break, how to detect it, how to revert>
 - **Follow-ups**: <baseline failures, spec gaps, pending decisions>, or "none"
+- **Sources used**: <ticket, design frames, documents, and meeting notes the work relied on, with links>
 
 ## In plain words
 

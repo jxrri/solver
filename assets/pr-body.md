@@ -36,6 +36,6 @@ Not measured here: <dimension: reason>
 
 <what could break, how to detect it, how to revert>
 
-## Spec references
+## Spec, design, and ticket references
 
-<paths or links to the spec sections this change satisfies>
+<links to the ticket, the spec sections, and the design frames this change satisfies>
