@@ -12,6 +12,7 @@ Write it in the user's conversation language. Use the project's own names for ro
 - **Risk and rollback**: <what could break, how to detect it, how to revert>
 - **Follow-ups**: <baseline failures, spec gaps, pending decisions>, or "none"
 - **Sources used**: <ticket, design frames, documents, and meeting notes the work relied on, with links>
+- **Lessons**: <past lessons applied, new or reinforced lessons recorded, and any skill change proposed>, or "none"
 
 ## In plain words
 

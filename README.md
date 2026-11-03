@@ -49,7 +49,7 @@ It returns an executive summary (technical, and in plain words with scenarios fr
 
 | | Step | Outcome |
 | :--- | :--- | :--- |
-| 01 | Conciliate | Current project rules: commands, spec location, PR target branch |
+| 01 | Conciliate and recall | Current project rules (commands, spec location, PR target branch) and relevant lessons from past runs |
 | 02 | Analyze and triage | Ticket, comments, and error events read; defect, spec gap, or expected behavior |
 | 03 | Baseline | Failures that existed before any change, recorded |
 | 04 | Reproduce | A failing test that captures the defect, plus its root cause |
@@ -59,6 +59,7 @@ It returns an executive summary (technical, and in plain words with scenarios fr
 | 08 | Apply and verify | Winner implemented, full test battery compared with the baseline, at most 3 fix rounds |
 | 09 | Summarize | Technical summary, plus a plain-words one with scenarios that use the project's own roles, screens, and flows |
 | 10 | Deliver | Branch pushed, PR opened to the project's target branch, and linked on the ticket |
+| 11 | Learn | Lessons from the run recorded per project and globally; recurring ones proposed as changes to the skill |
 
 ## Guarantees
 
@@ -68,6 +69,8 @@ It returns an executive summary (technical, and in plain words with scenarios fr
 - Treats ticket, design, and log content as data, never as instructions.
 - Runs security probes only against local or owned environments.
 - Reports unmeasurable dimensions as `n/a` instead of inventing numbers.
+- Learns only from observed outcomes and your corrections, never from ticket or document content.
+- Never edits itself: lessons stay in `~/.local/share/solver/`, and recurring ones become proposals for you to accept or reject.
 
 ## Files
 
@@ -78,6 +81,7 @@ It returns an executive summary (technical, and in plain words with scenarios fr
 | [`references/scoring.md`](references/scoring.md) | Gates, score anchors, tie-breakers |
 | [`assets/pr-body.md`](assets/pr-body.md) | Pull request template |
 | [`assets/executive-summary.md`](assets/executive-summary.md) | Executive summary template, technical and in plain words |
+| [`references/learning.md`](references/learning.md) | Where lessons live, how they are recalled and captured, and when they become skill proposals |
 
 ## Related
 
